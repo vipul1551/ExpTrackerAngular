@@ -1,7 +1,23 @@
-<h2 class="header">Sign Up</h2>
+<div class="row">
 
-First Name : <input type="text" [(ngModel)]="firstName" /> <br><br>
-Email : <input type="text" [(ngModel)]="email" /> <br><br>
-Password : <input type="password" [(ngModel)]="password" /> <br><br>
-
-<button type="button" (click)="signup()">Sign Up</button>
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <h2 class="header" align="center">SIGN UP</h2>
+        First Name : <input type="text" class="form-control" [(ngModel)]="firstName" /> <br>
+        Email : <input type="text" class="form-control" [(ngModel)]="email" /> <br>
+        Password : <input type="password" class="form-control" [(ngModel)]="password" /> <br>
+       
+        Gender : <br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" value="male" [(ngModel)]="gender"/>Male
+          </div>
+          
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" value="female" [(ngModel)]="gender"/>Female
+          </div>
+        <br><br>
+        <div class="text-center">
+            <button type="button" class="btn btn-primary btn-block" (click)="signup()">Sign Up</button>
+        </div>
+    </div>
+</div>
