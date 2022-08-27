@@ -4,8 +4,8 @@
 
 export const environment:any = {
   production: false,
-  // url:"http://localhost:9898/",
-  url:"https://exptracker-f12ba.web.app/"
+  url:"http://localhost:9898/"
+  // url:"https://exptracker-f12ba.web.app/"
 
 };
 
