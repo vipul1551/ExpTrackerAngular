@@ -2,7 +2,7 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-export const environment = {
+export const environment:any = {
   production: false,
   // url:"http://localhost:9898/",
   url:"https://exptracker-f12ba.web.app/"
