@@ -47,8 +47,4 @@ export class ListcategoryComponent implements OnInit {
     })
   }
 
-  editCategory(categoryId:any){
-
-  }
-
 }

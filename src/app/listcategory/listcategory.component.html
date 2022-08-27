@@ -15,7 +15,7 @@
                 <td>{{c.categoryName}}</td>
                 <td><button class="btn btn-danger" (click)="deleteCategory(c.categoryId)">Delete</button>&nbsp;
                     <button class="btn btn-primary" (click)="viewCategory(c.categoryId)">View</button>&nbsp;
-                    <button class="btn btn-primary" (click)="editCategory(c.categoryId)">Edit</button>                    
+                    <button class="btn btn-primary"><a routerLink="/admin/editcategory/{{c.categoryId}}" style="text-decoration:none;color:white;">Edit</a></button>                    
                 </td>
             </tr>
         </table>

@@ -1,1 +1,9 @@
-<p>editcategory works!</p>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <h2 align="center">Edit Category</h2>
+        Category Name : <input type="text" [(ngModel)]="categoryName" class="form-control"><br><br>
+
+        <button class="btn btn-primary" (click)="updateCategory()">Update</button>
+    </div>
+</div>

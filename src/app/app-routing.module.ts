@@ -4,6 +4,7 @@ import { AddcategoryComponent } from './addcategory/addcategory.component';
 import { AdminlayoutComponent } from './adminlayout/adminlayout.component';
 import { AuthtokenGuard } from './authtoken.guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { EditcategoryComponent } from './editcategory/editcategory.component';
 import { HomeComponent } from './home/home.component';
 import { ListcategoryComponent } from './listcategory/listcategory.component';
 import { LoginComponent } from './login/login.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
     {component : DashboardComponent,path : "dashboard"},
     {component : AddcategoryComponent,path : "addcategory"},
     {component : ListcategoryComponent,path : "listcategory"},
+    {component : EditcategoryComponent,path : "editcategory/:categoryId"}
   ], canActivate : [AuthtokenGuard]
   }
 ];

@@ -25,4 +25,12 @@ export class AdminService {
   viewCategoryAPI(categoryId:any):Observable<any>{
     return this.http.get(environment.url + "admin/category/" + categoryId)
   }
+
+  getCategoryByIdAPI(categoryId:any):Observable<any>{
+    return this.http.get(environment.url + "admin/category/" + categoryId)
+  }
+
+  updateCategoryAPI(category:any):Observable<any>{
+    return this.http.put(environment.url + "admin/category/",category)
+  }
 }

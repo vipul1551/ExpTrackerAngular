@@ -27,6 +27,7 @@ export class LoginComponent {
     this.sessionService.loginApi(user).subscribe(resp=> {
       let authToken = resp.data.user.authToken
       localStorage.setItem("authToken",authToken)
+      console.log(resp);
       
       this.toastr.success("Login successfully");
       this.authTokenService.authToken = resp.data.user.authToken
