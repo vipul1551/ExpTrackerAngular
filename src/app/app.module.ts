@@ -11,7 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UserlayoutComponent } from './userlayout/userlayout.component';
 import { HomeComponent } from './home/home.component';
 import { LogoutComponent } from './logout/logout.component';
@@ -21,6 +21,7 @@ import { AdminlayoutComponent } from './adminlayout/adminlayout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ListcategoryComponent } from './listcategory/listcategory.component';
 import { EditcategoryComponent } from './editcategory/editcategory.component';
+import { TokenInterceptor } from './token.interceptor';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,7 @@ import { EditcategoryComponent } from './editcategory/editcategory.component';
     DialogModule,
     TableModule
   ],
-  providers: [],
+  providers: [{provide:HTTP_INTERCEPTORS,useClass:TokenInterceptor,multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
